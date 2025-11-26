@@ -1,5 +1,3 @@
-const merge = (...className: (string | boolean | undefined | null)[]) => {
-  return className.filter(Boolean).join("");
-};
-
-export default merge;
+export default function merge(...classes: (string | undefined)[]) {
+  return classes.filter(Boolean).join(" ");
+}
