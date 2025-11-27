@@ -35,7 +35,7 @@ const Login = () => {
                 placeholder="eg: bleach123"
               />
               <div className="w-full flex justify-center pt-2">
-                <Link to={"/dashboard"}>
+                <Link to={"/main"}>
                   <Button
                     onClick={() => console.log("Clicked")}
                     className="bg-login hover:bg-blue-300"

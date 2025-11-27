@@ -11,14 +11,14 @@ export const routes = [
   { path: "/", element: <Login /> },
   { path: "*", element: <NotFound /> },
   {
-    path: "/dashboard",
+    path: "/main",
     element: <MainLayout />,
     children: [
       { index: true, element: <Dashboard /> },
       { path: "courses", element: <Courses /> },
       { path: "community", element: <Community /> },
       { path: "chat", element: <Chat /> },
-      { path: "settigns", element: <Settings /> },
+      { path: "settings", element: <Settings /> },
     ],
   },
 ];
