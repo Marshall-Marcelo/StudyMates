@@ -35,7 +35,7 @@ const Login = () => {
                 placeholder="eg: bleach123"
               />
               <div className="w-full flex justify-center pt-2">
-                <Link to={""}>
+                <Link to={"/dashboard"}>
                   <Button
                     onClick={() => console.log("Clicked")}
                     className="bg-login hover:bg-blue-300"
@@ -43,7 +43,9 @@ const Login = () => {
                   />
                 </Link>
               </div>
-              <span className="text-xs">Problems logging in? try student@slu.edu.ph | student123</span>
+              <span className="text-xs">
+                Problems logging in? try <i>student@slu.edu.ph</i> | <i>student123</i>
+              </span>
             </div>
           </div>
         </div>

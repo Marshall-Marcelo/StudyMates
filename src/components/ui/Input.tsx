@@ -2,7 +2,7 @@ import React from "react";
 import merge from "@/lib/merge";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label: string;
+  label?: string;
   placeholder?: string;
   className?: string;
 }
