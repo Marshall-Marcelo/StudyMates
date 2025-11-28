@@ -13,7 +13,7 @@ const Header = () => {
         <button className="px-4 py-2 rounded-md bg-white shadow hover:cursor-pointer">
           <IoMdArrowBack />
         </button>
-        <Input className="rounded-2xl bg-white" placeholder={"Search"} />
+        <Input className="rounded-2xl w-full bg-white" placeholder={"Search"} />
       </div>
       <div className="flex gap-2 items-center">
         <IconContainer>

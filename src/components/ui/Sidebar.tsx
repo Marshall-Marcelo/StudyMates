@@ -36,6 +36,7 @@ const Sidebar = ({ links, current, className }: SidebarProps) => {
           </Link>
         );
       })}
+      <div className="mt-auto">Logout</div>
     </aside>
   );
 };
