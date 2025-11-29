@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "@/components/ui/Card";
 import Input from "@/components/ui/Input";
+import Table, { type TableHeader } from "@/components/ui/Table";
+import data from "@/data/data.json";
 
 const Dashboard = () => {
   const [searchSubject, setSearchSubject] = useState<string | undefined>(undefined);
+  const tableData = data.task;
+  const tableHeaders: TableHeader[] = [
+    { label: "No", key: "no" },
+    { label: "Task", key: "task" },
+    { label: "Course", key: "course" },
+    { label: "Status", key: "status" },
+  ];
+
   return (
     <div className="grid grid-cols-3 grid-rows-8 gap-2">
       <Card className="col-start-1 col-end-3 row-start-1 row-end-3 flex justify-between items-center">
@@ -17,7 +27,7 @@ const Dashboard = () => {
         <span>Image Here</span>
       </Card>
       <Card className="col-start-3 col-end-4 row-start-1 row-end-4">Calendar Small Card</Card>
-      <Card className="col-start-1 col-end-3 row-start-3 row-end-5">
+      <Card className="col-start-1 col-end-3 row-start-3 row-end-5 flex flex-col gap-2">
         <div className="flex justify-between items-center">
           <h2>Assignments</h2>
           <Input
@@ -27,6 +37,7 @@ const Dashboard = () => {
             placeholder="Search by Subject"
           />
         </div>
+        <Table data={tableData} headers={tableHeaders} />
       </Card>
       <Card className="col-start-3 col-end-4 row-start-4 row-end-7">Attendance Small Card</Card>
       <Card className="col-start-1 col-end-2 row-start-5 row-end-9">Forums</Card>

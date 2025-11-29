@@ -16,7 +16,7 @@ const Input = ({ label, className, placeholder, ...props }: InputProps) => {
           <input
             {...props}
             className={merge(
-              "px-2 py-3 text-sm text-login focus:outline-none focus:border-l-4 focus:border-login transition-all duration-75 ease-in-out",
+              "bg-white px-2 py-3 text-sm text-login focus:outline-none focus:border-l-4 focus:border-login transition-all duration-75 ease-in-out",
               className
             )}
             placeholder={placeholder}
