@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import { PageWrapper } from "@/components/ui/Wrapper";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
+// import data from "@/data/data.json";
 
 const Login = () => {
+  // const student = data.student;
   const [email, setEmail] = useState<undefined | string>(undefined);
   const [password, setPassword] = useState<undefined | string>(undefined);
 
@@ -27,25 +29,21 @@ const Login = () => {
                 label={"Email Address"}
                 placeholder="eg: 123456@slu.edu.ph"
               />
-              <Input
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                label={"Password"}
-                placeholder="eg: bleach123"
-              />
+              <Input value={password} onChange={(e) => setPassword(e.target.value)} type="password" label={"Password"} placeholder="eg: bleach123" />
               <div className="w-full flex justify-center pt-2">
                 <Link to={"/main"}>
                   <Button
+                    disabled={!email && !password}
                     onClick={() => console.log("Clicked")}
-                    className="bg-login hover:bg-blue-300"
+                    className="bg-login hover:bg-blue-300 hover:cursor-pointer"
                     label={"Login"}
                   />
                 </Link>
               </div>
               <span className="text-xs">
-                Problems logging in? try <i>student@slu.edu.ph</i> | <i>student123</i>
+                Please use these credentials | <i>email: student123@slu.edu.ph</i> | <i>password: student123</i>
               </span>
+              <span className="text-xs">If you can't login just type anything in the fields</span>
             </div>
           </div>
         </div>

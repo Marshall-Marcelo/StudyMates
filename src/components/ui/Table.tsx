@@ -1,4 +1,4 @@
-import React, { type HtmlHTMLAttributes } from "react";
+import { type HtmlHTMLAttributes } from "react";
 import merge from "@/lib/merge";
 
 interface TableProps extends HtmlHTMLAttributes<HTMLTableElement> {
@@ -19,14 +19,7 @@ const Table = ({ className, headers, data }: TableProps) => {
         <tr>
           {headers.map((header, i) => {
             return (
-              <th
-                key={i}
-                className={merge(
-                  "font-normal",
-                  i === 0 && "rounded-tl-md",
-                  i === headers.length - 1 && "rounded-tr-md"
-                )}
-              >
+              <th key={i} className={merge("font-normal", i === 0 && "rounded-tl-md", i === headers.length - 1 && "rounded-tr-md")}>
                 {header.label}
               </th>
             );
